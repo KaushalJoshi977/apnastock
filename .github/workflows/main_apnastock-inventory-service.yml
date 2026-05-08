@@ -7,6 +7,9 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "inventory-service/**"
+      - ".github/workflows/main_apnastock-inventory-service.yml"
   workflow_dispatch:
 
 jobs:
@@ -24,6 +27,7 @@ jobs:
           node-version: '24.x'
 
       - name: npm install, build, and test
+        working-directory: inventory-service
         run: |
           npm install
           npm run build --if-present
@@ -61,5 +65,5 @@ jobs:
         with:
           app-name: 'apnastock-inventory-service'
           slot-name: 'Production'
-          package: .
+          package: './inventory-service'
           
