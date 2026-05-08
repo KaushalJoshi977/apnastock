@@ -1,0 +1,4 @@
+kaushaljoshi977_db_user
+MiztEuCrQUVv6THc
+
+mongodb+srv://kaushaljoshi977_db_user:MiztEuCrQUVv6THc@cluster0.4wsfesx.mongodb.net/ApnaStock?retryWrites=true&w=majority&appName=Cluster0
