@@ -9,6 +9,13 @@ const jwt = require("jsonwebtoken");
 dotenv.config();
 
 const app = express();
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "ApnaStock API Gateway is running successfully",
+    service: "api-gateway",
+    status: "OK",
+  });
+});
 
 const allowedOrigins = [
   "http://localhost:5173",
