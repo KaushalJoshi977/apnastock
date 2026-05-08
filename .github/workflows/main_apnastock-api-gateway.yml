@@ -27,6 +27,7 @@ jobs:
           node-version: '24.x'
 
       - name: npm install, build, and test
+        working-directory: api-gateway
         run: |
           npm install
           npm run build --if-present
@@ -64,5 +65,5 @@ jobs:
         with:
           app-name: 'apnastock-api-gateway'
           slot-name: 'Production'
-          package: .
+          package: './api-gateway'
           
